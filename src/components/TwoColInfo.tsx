@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import BadgedHeading from './BadgedHeading'
 import FeatureBullets from './FeatureBullets'
 
 interface TwoColInfoProps {
