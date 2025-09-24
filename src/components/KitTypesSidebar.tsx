@@ -36,11 +36,11 @@ const KitTypesSidebar = () => {
     }
   }
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contato')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const openWhatsApp = () => {
+    const phoneNumber = '5511911566511'
+    const message = 'Olá! Gostaria de solicitar um orçamento para montagem de kits promocionais.'
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -80,12 +80,12 @@ const KitTypesSidebar = () => {
       </div>
 
       <motion.button
-        onClick={scrollToContact}
+        onClick={openWhatsApp}
         className="btn-primary w-full mt-8"
         variants={itemVariants}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        aria-label="Solicitar orçamento personalizado"
+        aria-label="Solicitar orçamento via WhatsApp"
       >
         Quero meu orçamento!
       </motion.button>

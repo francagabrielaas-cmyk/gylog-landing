@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 import PhotoPanel from './PhotoPanel'
 
 const CTASection = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contato')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const openWhatsApp = () => {
+    const phoneNumber = '5511911566511'
+    const message = 'Olá! Gostaria de solicitar um orçamento para montagem de kits promocionais.'
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -51,11 +51,11 @@ const CTASection = () => {
             </div>
 
             <motion.button
-              onClick={scrollToContact}
+              onClick={openWhatsApp}
               className="btn-secondary text-lg px-8 py-4"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label="Falar com equipe e receber orçamento personalizado"
+              aria-label="Falar com equipe via WhatsApp e receber orçamento personalizado"
             >
               Fale agora com nosso time e receba seu orçamento personalizado.
             </motion.button>

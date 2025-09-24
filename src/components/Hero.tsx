@@ -6,11 +6,11 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, 20])
   const opacity = useTransform(scrollY, [0, 300], [1, 0.8])
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contato')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const openWhatsApp = () => {
+    const phoneNumber = '5511911566511'
+    const message = 'Olá! Gostaria de solicitar um orçamento para montagem de kits promocionais.'
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -51,11 +51,11 @@ const Hero = () => {
               </p>
               
               <motion.button
-                onClick={scrollToContact}
+                onClick={openWhatsApp}
                 className="btn-primary text-lg px-8 py-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                aria-label="Solicitar orçamento para montagem de kits"
+                aria-label="Solicitar orçamento via WhatsApp"
               >
                 Monte seu kit agora!
               </motion.button>

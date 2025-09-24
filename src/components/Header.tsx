@@ -21,6 +21,13 @@ const Header = () => {
     setIsMenuOpen(false)
   }
 
+  const openWhatsApp = () => {
+    const phoneNumber = '5511911566511'
+    const message = 'Olá! Gostaria de solicitar um orçamento para montagem de kits promocionais.'
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
@@ -73,9 +80,9 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <button
-              onClick={() => scrollToSection('contato')}
+              onClick={openWhatsApp}
               className="btn-primary"
-              aria-label="Solicitar orçamento"
+              aria-label="Solicitar orçamento via WhatsApp"
             >
               Orçar Agora!
             </button>
@@ -128,9 +135,9 @@ const Header = () => {
                 Fale Conosco
               </button>
               <button
-                onClick={() => scrollToSection('contato')}
+                onClick={openWhatsApp}
                 className="btn-primary w-full mt-4"
-                aria-label="Solicitar orçamento"
+                aria-label="Solicitar orçamento via WhatsApp"
               >
                 Orçar Agora!
               </button>
