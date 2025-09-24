@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import FeatureBullets from './FeatureBullets'
+import { getImagePath } from '../utils/paths'
 
 interface TwoColInfoProps {
   badge: string
@@ -75,7 +76,7 @@ const TwoColInfo = ({
           >
             <div className="relative">
               <img
-                src={imageSrc}
+                src={getImagePath(imageSrc)}
                 alt={imageAlt}
                 className="w-full h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
               />

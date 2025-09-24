@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { getImagePath } from '../utils/paths'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,7 +38,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src="/logo/logo-gylog.png"
+              src={getImagePath("logo/logo-gylog.png")}
               alt="Gylog Logo"
               className="h-8 w-auto"
             />

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Glow from './Glow'
+import { getImagePath } from '../utils/paths'
 
 const Hero = () => {
   const { scrollY } = useScroll()
@@ -23,7 +24,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/70 z-10" />
         <div className="absolute inset-0 bg-black/40 z-20" />
         <img
-          src="/imagens/background.png"
+          src={getImagePath("imagens/background.png")}
           alt="Pessoa interagindo com tablet em ambiente logístico"
           className="w-full h-full object-cover"
         />

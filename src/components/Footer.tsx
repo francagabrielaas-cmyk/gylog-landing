@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone } from 'lucide-react'
+import { getImagePath } from '../utils/paths'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -51,7 +52,7 @@ const Footer = () => {
               aria-label="Voltar ao topo"
             >
               <img
-                src="/logo/logo-gylog.png"
+                src={getImagePath("logo/logo-gylog.png")}
                 alt="Gylog Logo"
                 className="h-12 w-auto filter brightness-0 invert"
               />
@@ -64,7 +65,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/20 rounded-lg p-3 text-center hover:bg-white/30 transition-colors duration-300">
                 <img
-                  src="/certificacoes/inmetro.png"
+                  src={getImagePath("certificacoes/inmetro.png")}
                   alt="Certificação INMETRO"
                   className="h-12 w-auto mx-auto mb-2"
                 />
@@ -72,7 +73,7 @@ const Footer = () => {
               </div>
               <div className="bg-white/20 rounded-lg p-3 text-center hover:bg-white/30 transition-colors duration-300">
                 <img
-                  src="/certificacoes/anvisa.png"
+                  src={getImagePath("certificacoes/anvisa.png")}
                   alt="Certificação ANVISA"
                   className="h-12 w-auto mx-auto mb-2"
                 />
@@ -80,7 +81,7 @@ const Footer = () => {
               </div>
               <div className="bg-white/20 rounded-lg p-3 text-center hover:bg-white/30 transition-colors duration-300">
                 <img
-                  src="/certificacoes/sgs.png"
+                  src={getImagePath("certificacoes/sgs.png")}
                   alt="Certificação SGS"
                   className="h-12 w-auto mx-auto mb-2"
                 />
@@ -88,7 +89,7 @@ const Footer = () => {
               </div>
               <div className="bg-white/20 rounded-lg p-3 text-center hover:bg-white/30 transition-colors duration-300">
                 <img
-                  src="/certificacoes/smeta.png"
+                  src={getImagePath("certificacoes/smeta.png")}
                   alt="Certificação SMETA"
                   className="h-12 w-auto mx-auto mb-2"
                 />

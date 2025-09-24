@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/paths'
 
 interface PhotoPanelProps {
   imageSrc: string
@@ -17,7 +18,7 @@ const PhotoPanel = ({ imageSrc, imageAlt, className = '' }: PhotoPanelProps) => 
     >
       <div className="relative overflow-hidden rounded-2xl shadow-2xl">
         <img
-          src={imageSrc}
+          src={getImagePath(imageSrc)}
           alt={imageAlt}
           className="w-full h-80 lg:h-96 object-cover"
         />
