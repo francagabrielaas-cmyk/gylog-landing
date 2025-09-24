@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-ink font-sans;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/25 relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shine;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primaryDark hover:shadow-lg hover:shadow-primary/25;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl border border-primary/15 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1;
+  }
+  
+  .badge {
+    @apply inline-block px-3 py-1 bg-gray-100 text-ink text-sm font-medium rounded-full;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primaryDark bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .motion-reduce {
+    @apply motion-reduce:transition-none motion-reduce:transform-none;
+  }
+  
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 to-accent/20 blur-xl opacity-0 transition-opacity duration-500;
+  }
+  
+  .glow-effect:hover::before {
+    @apply opacity-100;
+  }
+  
+  .whatsapp-pulse {
+    animation: whatsapp-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

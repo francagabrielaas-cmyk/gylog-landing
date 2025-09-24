@@ -1,0 +1,21 @@
+{
+  "name": "Gylog - Kits Promocionais",
+  "short_name": "Gylog",
+  "description": "Montagem de kits personalizada com eficiência, qualidade e redução de custos",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0B3A75",
+  "background_color": "#F8FAFC",
+  "display": "standalone",
+  "start_url": "/"
+}
